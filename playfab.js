@@ -3,14 +3,14 @@ async function loginWithDeviceId() {
   const customId = localStorage.getItem('device_id') || crypto.randomUUID();
   localStorage.setItem('device_id', customId);
 
-  const res = await fetch('https://YOUR_TITLE_ID.playfabapi.com/Client/LoginWithCustomID', {
+  const res = await fetch('https://1BD467.playfabapi.com/Client/LoginWithCustomID', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'X-PlayFabSDK': 'Custom'
     },
     body: JSON.stringify({
-      TitleId: 'YOUR_TITLE_ID',
+      TitleId: '1BD467,
       CustomId: customId,
       CreateAccount: true
     })
@@ -25,7 +25,7 @@ async function loginWithDeviceId() {
 }
 
 async function getVirtualCurrency() {
-  const res = await fetch('https://YOUR_TITLE_ID.playfabapi.com/Client/GetUserInventory', {
+  const res = await fetch('https://1BD467.playfabapi.com/Client/GetUserInventory', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
